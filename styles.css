@@ -1,0 +1,302 @@
+:root {
+    --black: #0B090A;
+    --darkgrey: #161A1D;
+    --maroon: #660708;
+    --redone: #A4161A;
+    --redtwo: #BA181B;
+    --brightred: #E5383B;
+    --fancygrey: #B1A7A6;
+    --greyone: #D3D3D3;
+    --greytwo: #F5F3F4;
+    --white: #fff;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+}
+
+
+/* //////////////////////////////////////////Navigation ////////////////////////////////////////// */
+
+.nav-container {
+    position: fixed;
+    top: -1px;
+    left: 0px;
+    width: 100%;
+    height: 150px;
+    margin: 0;
+    padding-left: 0%;
+    background-color: var(--darkgrey);
+    z-index: 1;
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: 0.2fr auto 1fr;
+    align-items: center;
+    height: 80px;
+    width: 90%;
+    max-width: 1720px;
+    margin: 0 auto;
+
+}
+
+#navbar-logo,img {
+    display:block;
+    margin: 0px;
+    margin-left: 20px;
+    padding: 0px;
+    max-width: 150px;
+}
+
+#navbar-logo {
+    cursor: pointer;
+}
+
+
+/* the nav-menu is the container for the nav-links and its job is to organize and resize them into the way we want them to be*/
+.nav-menu {
+    display:grid;
+    grid-template-columns: repeat(5, auto);
+    list-style: none;
+    text-align: center;
+    width: 70%;
+    justify-self: end;
+}
+
+
+/* nav-links allows us to customize the elements  */
+.nav-links {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.nav-links:hover {
+    color: var(--brightred);
+    transition: all 0.2s ease-out;
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* Image and Title */
+/* this makes it so we are not scrolling the body but instead the wrapper which will control the parallax */
+.wrapper {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+    
+}
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+.background-img-one {
+    position: absolute;
+    max-width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    transform: translateZ(-10px) scale(2.1);
+}
+
+.title {
+    font-size: 5rem;
+    color: var(--white);
+    text-shadow: 0 0 5px black;
+    
+}
+
+.title-ask {
+    padding-left: 75px;
+    font-size: 1.1rem;
+    font-family: fantasy ;
+    color: var(--white);
+}
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* @font-face {
+    font-family: 'myFirstFont';
+    src: url(playfairdisplay-variablefont_wght-webfont.woff);
+} */
+
+.featured-items {
+    /* font-family: ; */
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    background-color: var(--black) ;
+    height: 160%;
+    border: 10px solid var(--fancygrey);
+    border-right: 0;
+    border-left: 0;
+    border-radius: 10px;
+    width: auto;
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+}
+
+.featured-items p {
+    font-size: 3rem;
+    color: var(--white);
+    padding-left: 37vw;
+}
+/* =============================================================================== */
+.featured-items .items-container1 {
+    display: flex;
+    /* flex-direction: row; */
+    /* flex: wrap; */
+    justify-content: center;
+    /* align-items:center; */
+    gap: 40px;
+    height: 75vh;
+    border: 2px dotted white;
+}
+/* ============================================================ */
+.featured-items .items-container1 .turkey{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    width: 35vw;
+    height: 60vh;
+}
+
+
+.featured-items .items-container1 .turkey .turkey-img{
+    padding: 0;
+    margin: 0;
+    max-width: 55vh;
+    object-fit: cover;
+}
+
+.featured-items .items-container1 .turkey .turkey-p{
+    font-size: 1.3vw;
+    width: 55vh;
+    height: 50vw;
+    padding-left: 0;
+}
+
+/* ============================================================ */
+.featured-items .items-container1 .navidad{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 35vw;
+    height: 60vh;
+}
+
+.featured-items .items-container1 .navidad .navidad-img{
+    padding: 0;
+    margin: 0;
+    max-width: 55vh;
+    object-fit: cover;
+}
+
+.featured-items .items-container1 .navidad .navidad-p{
+    font-size: 1.5rem;
+    width: 55vh;
+    padding-left: 0;
+}
+/* ============================================================ */
+.featured-items .items-container1 .packages{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    height: 610px;
+}
+
+.featured-items .items-container1 .packages .packages-img{
+    padding: 0;
+    margin: 0;
+    max-width: 55vh;
+    object-fit: cover;
+}
+
+.featured-items .items-container1 .packages .packages-p{
+    font-size: 1.5rem;
+    width: 55vh;
+    padding-left: 0;
+}
+/* ============================================================ */
+/* ============================================================ */
+/* ============= */
+.featured-items .items-container2 {
+    display: flex;
+    /* flex-direction: row; */
+    flex: wrap;
+    justify-content: center;
+    /* align-items:center; */
+    gap: 40px;
+    height: 90vh;
+    border: 2px dotted white;
+}
+
+.featured-items .items-container2 .burger{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 60vh;
+    height: 45vh;
+}
+
+
+.featured-items .items-container2 .burger .burger-img{
+    padding: 0;
+    margin: 0;
+    max-width: 55vh;
+    object-fit: cover;
+}
+
+
+.featured-items .items-container2 .momma{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60vh;
+    height: 45vh;
+}
+
+.featured-items .items-container2 .momma .momma-img{
+    padding: 0;
+    margin: 0;
+    max-width: 55vh;
+    object-fit: cover;
+}
+
+.featured-items .items-container2 .bbq {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 60vh;
+    height: 45vh;
+}
+
+.featured-items .items-container2 .bbq .bbq-img{
+    padding: 0;
+    margin: 0;
+    max-width: 55vh;
+    object-fit: cover;
+}
